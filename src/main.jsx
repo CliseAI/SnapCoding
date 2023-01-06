@@ -10,7 +10,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter basename={window.location.pathname || ""}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route exact path="/" component={Index} />
           <Route index element={<App />} />
           <Route path="/home" element={<App />} />
           <Route path="/courses" element={<Courses />} />
