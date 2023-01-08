@@ -1,7 +1,7 @@
 {
   "name": "snapcoding",
-  "homepage": "https://CliseAI.github.io/snapcoding",
-  "private": false,
+  "homepage": "https://cliseai.github.io/snapcoding/",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

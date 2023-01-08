@@ -1,21 +1,32 @@
-import styles from "./style";
-import { Stats, Hero, Tutorials, CTA } from "./components";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  Home,
+  Courses,
+  CourseView,
+  Layout,
+  About,
+  MaterialView,
+} from "./pages";
 
-const App = () => (
-  <>
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-      </div>
-    </div>
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Tutorials />
-        <CTA />
-      </div>
-    </div>
-  </>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:courseName" element={<CourseView />} />
+          <Route
+            path="/courses/:courseName/:materialName"
+            element={<MaterialView />}
+          />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 );
-
-export default App;

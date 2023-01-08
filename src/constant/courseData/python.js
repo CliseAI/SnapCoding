@@ -5,7 +5,7 @@ export const python = [
     materials: [
       {
         name: "Getting Started",
-        link: "gettingstarted",
+        link: "Gettingstarted",
       },
       {
         name: "Keyword and Identifiers",
